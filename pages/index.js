@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import {Button} from 'react-bootstrap';
+import Link from 'next/link';
+
 
 export default function Home() {
   return (
@@ -13,7 +17,11 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
+        <Link href={'/posts/first-post'} >
+        <Button>
+          goto posts
+        </Button>
+          </Link>
         <p className={styles.description}>
           Get started by editing <code>pages/index.js</code>
         </p>
